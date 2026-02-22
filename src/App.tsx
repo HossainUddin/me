@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import { AdminDashboard } from './pages/admin/Dashboard';
 import { AdminProjects } from './pages/admin/Projects';
 import { AdminServices } from './pages/admin/Services';
+import { ServiceDetails } from './pages/ServiceDetails';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                     <Footer />
                   </>
                 } />
+                <Route path="/services/:id" element={<ServiceDetails />} />
 
                 {/* Admin Routes */}
                 <Route path="/admin" element={<AdminLayout />}>

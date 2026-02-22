@@ -32,15 +32,6 @@ export const CallToAction = ({ onStartProject }: CallToActionProps) => {
                     >
                         {t('cta.start')}
                     </Button>
-                    <Link to="contact" smooth={true} duration={500}>
-                         <Button 
-                            variant="outline" 
-                            size="lg" 
-                            className="border-white text-white hover:bg-white/20 hover:text-white"
-                        >
-                            {t('cta.contact')}
-                        </Button>
-                    </Link>
                 </div>
             </div>
         </Section>

@@ -5,7 +5,6 @@ import { Services } from '../components/sections/Services';
 import { Portfolio } from '../components/sections/Portfolio';
 import { WhyChooseMe } from '../components/sections/WhyChooseMe';
 import { Testimonials } from '../components/sections/Testimonials';
-import { Pricing } from '../components/sections/Pricing';
 import { CallToAction } from '../components/sections/CallToAction';
 import { OrderModal } from '../components/ui/OrderModal';
 
@@ -20,7 +19,6 @@ const Home = () => {
             <Portfolio />
             <WhyChooseMe />
             <Testimonials />
-            <Pricing />
             <CallToAction onStartProject={() => setModalOpen(true)} />
 
             <OrderModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />

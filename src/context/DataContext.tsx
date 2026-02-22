@@ -141,9 +141,30 @@ const initialTestimonials: Testimonial[] = [
 ];
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
-  const [projects, setProjects] = useState<Project[]>(initialProjects);
-  const [services, setServices] = useState<Service[]>(initialServices);
-  const [testimonials, setTestimonials] = useState<Testimonial[]>(initialTestimonials);
+  const [projects, setProjects] = useState<Project[]>(() => {
+    const saved = localStorage.getItem('portfolio_projects');
+    return saved ? JSON.parse(saved) : initialProjects;
+  });
+  const [services, setServices] = useState<Service[]>(() => {
+    const saved = localStorage.getItem('portfolio_services');
+    return saved ? JSON.parse(saved) : initialServices;
+  });
+  const [testimonials, setTestimonials] = useState<Testimonial[]>(() => {
+    const saved = localStorage.getItem('portfolio_testimonials');
+    return saved ? JSON.parse(saved) : initialTestimonials;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('portfolio_projects', JSON.stringify(projects));
+  }, [projects]);
+
+  useEffect(() => {
+    localStorage.setItem('portfolio_services', JSON.stringify(services));
+  }, [services]);
+
+  useEffect(() => {
+    localStorage.setItem('portfolio_testimonials', JSON.stringify(testimonials));
+  }, [testimonials]);
 
   // Projects
   const addProject = (project: Project) => {

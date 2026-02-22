@@ -22,22 +22,22 @@ export const translations = {
     'nav.hire': 'Hire Me',
     
     // Hero
-    'hero.greeting': "Hi, I'm Hossain Uddin Ahmad",
-    'hero.role': 'Creative Web Developer & Graphic Designer',
+    'hero.greeting': "Hi, I'm Hossain Uddin Ahamad",
+    'hero.role': 'Web Developer & Graphic Designer',
     'hero.subtext': 'I specialize in product advertisement visuals, banner design, and modern web development that helps brands grow.',
     'hero.viewPortfolio': 'View Portfolio',
     'hero.hireMe': 'Hire Me',
 
     // Trust Bar
-    'stats.projects': '50+ Projects Completed',
+    'stats.projects': '20+ Projects Completed',
     'stats.delivery': 'Fast Delivery',
     'stats.satisfaction': 'Client Satisfaction Focused',
     'stats.design': 'Modern Creative Design',
 
     // Services
     'services.title': 'My Services',
-    'services.webDev': 'Web Development',
-    'services.tshirt': 'T-Shirt Design',
+    'services.webDev': 'FrontendWeb Development',
+    'services.tshirt': 'T-Shirt Designs',
     'services.ads': 'Product Ads Visuals',
     'services.banner': 'Banner Design',
     'services.learnMore': 'Learn More',
@@ -46,7 +46,7 @@ export const translations = {
     'portfolio.title': 'Featured Work',
     'portfolio.all': 'All',
     'portfolio.web': 'Web',
-    'portfolio.tshirt': 'T-Shirt',
+    'portfolio.t-shirt': 'T-Shirt',
     'portfolio.ads': 'Ads',
     'portfolio.banner': 'Banner',
 
@@ -97,7 +97,7 @@ export const translations = {
 
     // Hero
     'hero.greeting': 'হাই, আমি হোসেন উদ্দিন আহমেদ',
-    'hero.role': 'ক্রিয়েটিভ ওয়েব ডেভেলপার এবং গ্রাফিক ডিজাইনার',
+    'hero.role': 'ওয়েব ডেভেলপার এবং গ্রাফিক ডিজাইনার',
     'hero.subtext': 'আমি পণ্যের বিজ্ঞাপন ভিজ্যুয়াল, ব্যানার ডিজাইন এবং আধুনিক ওয়েব ডেভেলপমেন্টে বিশেষজ্ঞ যা ব্র্যান্ডের বৃদ্ধিতে সহায়তা করে।',
     'hero.viewPortfolio': 'পোর্টফোলিও দেখুন',
     'hero.hireMe': 'আমাকে নিয়োগ দিন',

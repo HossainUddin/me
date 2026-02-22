@@ -4,6 +4,7 @@ import { useData } from '../../context/DataContext';
 import { Section } from '../ui/Section';
 import { Code, Shirt, Megaphone, Image as ImageIcon, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { Link } from 'react-router-dom';
 
 const iconMap: Record<string, React.ReactNode> = {
   'Code': <Code size={32} />,
@@ -40,9 +41,11 @@ export const Services = () => {
             <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">
               {service.description}
             </p>
-            <Button variant="ghost" size="sm" className="p-0 hover:bg-transparent hover:text-primary">
-              {t('services.learnMore')} <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <Link to={`/services/${service.id}`}>
+              <Button variant="ghost" size="sm" className="p-0 hover:bg-transparent hover:text-primary">
+                {t('services.learnMore')} <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         ))}
       </div>

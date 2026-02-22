@@ -11,7 +11,7 @@ import { Link } from 'react-scroll'; // We'll install react-scroll for smooth sc
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage(); // Kept for text content, language switching removed
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -27,8 +27,7 @@ export const Navbar = () => {
     { name: t('nav.about'), to: 'about' },
     { name: t('nav.portfolio'), to: 'portfolio' },
     { name: t('nav.services'), to: 'services' },
-    { name: t('nav.pricing'), to: 'pricing' },
-    { name: t('nav.contact'), to: 'contact' },
+    { name: t('nav.contact'), to: 'cta' },
   ];
 
   return (
@@ -63,18 +62,14 @@ export const Navbar = () => {
         {/* Actions */}
         <div className="hidden md:flex items-center space-x-4">
           <button
-            onClick={() => setLanguage(language === 'en' ? 'bn' : 'en')}
-            className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-          >
-            <span className="font-bold text-sm">{language === 'en' ? 'BN' : 'EN'}</span>
-          </button>
-          <button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          <Button size="sm">{t('nav.hire')}</Button>
+          <Link to="cta" smooth={true} duration={500}>
+            <Button size="sm">{t('nav.hire')}</Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -108,17 +103,13 @@ export const Navbar = () => {
               </Link>
             ))}
             <div className="flex items-center space-x-6 pt-4">
-               <button
-                onClick={() => setLanguage(language === 'en' ? 'bn' : 'en')}
-                className="font-bold text-sm"
-              >
-                {language === 'en' ? 'BN' : 'EN'}
-              </button>
               <button onClick={toggleTheme}>
                  {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
               </button>
             </div>
-             <Button size="sm" onClick={() => setIsOpen(false)}>{t('nav.hire')}</Button>
+             <Link to="cta" smooth={true} duration={500} onClick={() => setIsOpen(false)}>
+               <Button size="sm">{t('nav.hire')}</Button>
+             </Link>
           </motion.div>
         )}
       </AnimatePresence>
