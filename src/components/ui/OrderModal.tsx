@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { X, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './Button';
@@ -48,7 +48,7 @@ export const OrderModal = ({ isOpen, onClose, serviceName = '' }: OrderModalProp
                     Accept: 'application/json'
                 },
                 body: JSON.stringify({
-                    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE',
+                    access_key: '6ac9ef28-2041-45d6-92ad-3924750630c4',
                     subject: `New Project Request: ${formData.service || 'General Inquiry'}`,
                     from_name: formData.name,
                     email: formData.email,
