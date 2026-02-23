@@ -1,6 +1,7 @@
 import React from 'react';
 import { useData } from '../../context/DataContext';
-import { FolderKanban, ShoppingBag, MessageSquare, Users } from 'lucide-react';
+import { FolderKanban, ShoppingBag, MessageSquare, Users, Download } from 'lucide-react';
+import { Button } from '../../components/ui/Button';
 
 export const AdminDashboard = () => {
     const { projects, services, testimonials } = useData();
@@ -12,9 +13,36 @@ export const AdminDashboard = () => {
         { label: 'Total Clients', value: '12', icon: Users, color: 'bg-green-500' },
     ];
 
+    const handleExport = () => {
+        const data = {
+            projects,
+            services,
+            testimonials
+        };
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'data.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    };
+
     return (
         <div>
-            <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">Dashboard Overview</h1>
+            <div className="flex justify-between items-center mb-8">
+                <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Dashboard Overview</h1>
+                <Button onClick={handleExport} size="sm" className="flex items-center gap-2">
+                    <Download size={16} />
+                    Export data.json
+                </Button>
+            </div>
+            
+            <div className="bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 p-4 rounded-xl mb-8 text-sm">
+                <strong>Static Hosting Note:</strong> Since this portfolio uses static hosting (GitHub Pages), changes made in the admin panel are only saved to your browser's local storage. To publish changes for everyone, click <strong>Export data.json</strong> and replace the <code>src/data/data.json</code> file in your code, then run a GitHub commit!
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {stats.map((stat, index) => (
