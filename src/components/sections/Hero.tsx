@@ -56,40 +56,54 @@ export const Hero = () => {
            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
            className="relative hidden md:block"
         >
-           {/* Abstract Shapes / Illustration Placeholder */}
-           <div className="relative w-full aspect-square max-w-[500px] mx-auto">
-              <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+           {/* Abstract Shapes / Visual Placeholder */}
+           <div className="relative w-full aspect-square max-w-[500px] mx-auto flex items-center justify-center">
+              {/* Spinning Glowing Orb Behind Image */}
               <motion.div 
-                animate={{ y: [0, -20, 0] }}
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 90, 0]
+                }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 bg-gradient-to-tr from-primary/60 to-purple-500/60 rounded-full blur-[80px] -z-10"
+              />
+              
+              {/* Main Image Container */}
+              <motion.div 
+                initial={{ y: 0 }}
+                animate={{ y: [-10, 10, -10] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-                className="relative z-10 bg-slate-200 dark:bg-slate-800 rounded-2xl shadow-2xl overflow-hidden border border-slate-300 dark:border-slate-700 h-full w-full flex items-center justify-center"
+                className="relative z-10 bg-white dark:bg-slate-800 p-3 sm:p-4 rounded-[2rem] shadow-2xl border border-slate-100 dark:border-slate-700 max-w-[85%] aspect-[3/4] rotate-[-3deg] hover:rotate-0 transition-transform duration-500"
               >
-                  <span className="text-slate-400 w-full h-full">
-                    <img src={meImage} alt="Hossain Uddin Ahamad" className="w-full h-full object-cover" />
-                  </span>
+                  <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-slate-100 dark:bg-slate-900">
+                    <img 
+                      src={meImage} 
+                      alt="Hossain Uddin Ahamad" 
+                      className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110" 
+                    />
+                    {/* Subtle Overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                  </div>
               </motion.div>
               
-              {/* Floating Elements */}
+              {/* Floating Element 1 */}
               <motion.div
-                 animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
-                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-                 className="absolute -top-10 -right-10 w-24 h-24 bg-white dark:bg-slate-800 rounded-xl shadow-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 z-20"
+                 animate={{ y: [0, -20, 0], x: [0, 10, 0], rotate: [0, 10, 0] }}
+                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1 }}
+                 className="absolute -top-4 right-4 sm:-top-8 sm:right-8 w-20 h-20 sm:w-24 sm:h-24 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-2xl shadow-xl flex items-center justify-center border border-white/50 dark:border-slate-700/50 z-20"
               >
-                  <span className="text-4xl">🎨</span>
+                  <span className="text-4xl sm:text-5xl drop-shadow-md">🎨</span>
               </motion.div>
+
+               {/* Floating Element 2 */}
                <motion.div
-                 animate={{ y: [0, -15, 0], x: [0, -5, 0] }}
-                 transition={{ repeat: Infinity, duration: 7, ease: "easeInOut", delay: 0.5 }}
-                 className="absolute -bottom-5 -left-5 w-auto px-6 py-3 bg-white dark:bg-slate-800 rounded-full shadow-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 z-20"
+                 animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
+                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
+                 className="absolute bottom-10 -left-6 sm:bottom-16 sm:-left-10 px-6 py-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-full shadow-2xl border border-white/50 dark:border-slate-700/50 z-20"
               >
-                 <span className="font-bold text-sm">Web Dev</span>
-              </motion.div>
-              <motion.div
-                 animate={{ y: [0, -15, 0], x: [0, -5, 0] }}
-                 transition={{ repeat: Infinity, duration: 7, ease: "easeInOut", delay: 0.5 }}
-                 className="absolute bottom-6 -right-8 w-auto px-6 py-3 bg-white dark:bg-slate-800 rounded-full shadow-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 z-20"
-              >
-                 <span className="font-bold text-sm">Designer</span>
+                 <span className="font-bold text-sm sm:text-base bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                    Frontend Dev
+                 </span>
               </motion.div>
            </div>
         </motion.div>
