@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
 import { Button } from '../ui/Button';
-import { Link } from 'react-scroll'; // We'll install react-scroll for smooth scrolling
+import { useNavigate, useLocation } from 'react-router-dom';
 
 // IMPORTANT: Install react-scroll first: npm install react-scroll @types/react-scroll
 
@@ -13,6 +13,13 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { t } = useLanguage(); // Kept for text content, language switching removed
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNav = (target: string) => {
+      setIsOpen(false);
+      navigate('/', { state: { scrollTo: target } });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,15 +54,13 @@ export const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <Link
+            <button
               key={link.to}
-              to={link.to}
-              smooth={true}
-              duration={500}
+              onClick={() => handleNav(link.to)}
               className="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary cursor-pointer transition-colors"
             >
               {link.name}
-            </Link>
+            </button>
           ))}
         </div>
 
@@ -67,9 +72,9 @@ export const Navbar = () => {
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          <Link to="cta" smooth={true} duration={500}>
+          <button onClick={() => handleNav('cta')}>
             <Button size="sm">{t('nav.hire')}</Button>
-          </Link>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -91,25 +96,22 @@ export const Navbar = () => {
             className="absolute top-full left-0 w-full bg-white dark:bg-slate-900 shadow-xl md:hidden flex flex-col items-center py-8 space-y-6"
           >
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.to}
-                to={link.to}
-                smooth={true}
-                duration={500}
-                onClick={() => setIsOpen(false)}
+                onClick={() => handleNav(link.to)}
                 className="text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-primary"
               >
                 {link.name}
-              </Link>
+              </button>
             ))}
             <div className="flex items-center space-x-6 pt-4">
               <button onClick={toggleTheme}>
                  {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
               </button>
             </div>
-             <Link to="cta" smooth={true} duration={500} onClick={() => setIsOpen(false)}>
+             <button onClick={() => handleNav('cta')}>
                <Button size="sm">{t('nav.hire')}</Button>
-             </Link>
+             </button>
           </motion.div>
         )}
       </AnimatePresence>

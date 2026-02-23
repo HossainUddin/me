@@ -64,8 +64,8 @@ export const Hero = () => {
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 className="relative z-10 bg-slate-200 dark:bg-slate-800 rounded-2xl shadow-2xl overflow-hidden border border-slate-300 dark:border-slate-700 h-full w-full flex items-center justify-center"
               >
-                  <span className="text-slate-400">
-                    <img src={meImage} alt="Hossain Uddin Ahamad" className="w-[80%] h-auto rounded-xl mx-auto drop-shadow-2xl" />
+                  <span className="text-slate-400 w-full h-full">
+                    <img src={meImage} alt="Hossain Uddin Ahamad" className="w-full h-full object-cover" />
                   </span>
               </motion.div>
               

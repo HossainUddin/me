@@ -1,9 +1,15 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { Facebook, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  const handleNav = (target: string) => {
+      navigate('/', { state: { scrollTo: target } });
+  };
 
   return (
     <footer className="bg-slate-100 dark:bg-slate-900 pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
@@ -23,9 +29,9 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold mb-6 text-slate-900 dark:text-white">{t('nav.home')}</h4>
              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-              <li><a href="#" className="hover:text-primary transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Portfolio</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Services</a></li>
+              <li><button onClick={() => handleNav('about')} className="hover:text-primary transition-colors text-left w-full">About</button></li>
+              <li><button onClick={() => handleNav('portfolio')} className="hover:text-primary transition-colors text-left w-full">Portfolio</button></li>
+              <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">Services</button></li>
             </ul>
           </div>
 
@@ -33,9 +39,9 @@ export const Footer = () => {
            <div>
             <h4 className="font-bold mb-6 text-slate-900 dark:text-white">{t('nav.services')}</h4>
              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-              <li><a href="#" className="hover:text-primary transition-colors">Web Development</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">T-Shirt Design</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Banner Design</a></li>
+              <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">Web Development</button></li>
+              <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">T-Shirt Design</button></li>
+              <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">Banner Design</button></li>
             </ul>
           </div>
 

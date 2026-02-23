@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { Section } from '../ui/Section';
 import { CheckCircle2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const WhyChooseMe = () => {
   const { t } = useLanguage();
@@ -49,8 +50,16 @@ export const WhyChooseMe = () => {
             </div>
             
             {/* Simple decorative element */}
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/20 backdrop-blur-3xl rounded-full -z-10"></div>
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-purple-500/20 backdrop-blur-3xl rounded-full -z-10"></div>
+            <motion.div 
+               animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
+               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+               className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/20 backdrop-blur-3xl rounded-full -z-10"
+            ></motion.div>
+            <motion.div 
+               animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3], y: [0, -10, 0] }}
+               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+               className="absolute -top-6 -right-6 w-32 h-32 bg-purple-500/20 backdrop-blur-3xl rounded-full -z-10"
+            ></motion.div>
         </div>
       </div>
     </Section>

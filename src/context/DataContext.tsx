@@ -7,8 +7,10 @@ export interface Project {
   category: 'Web' | 'T-Shirt' | 'Ads' | 'Banner';
   image: string;
   description: string;
+  longDescription?: string;
   tools: string[];
   link?: string;
+  gallery?: string[];
 }
 
 export interface Service {
@@ -57,8 +59,14 @@ const initialProjects: Project[] = [
     category: 'Web',
     image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     description: 'Full-stack e-commerce solution with payment gateway.',
+    longDescription: 'This comprehensive e-commerce platform provides an intuitive shopping experience with seamless payment integration, user dashboards, and an admin panel for inventory management.',
     tools: ['React', 'Node.js', 'MongoDB'],
-     link: '#'
+    link: '#',
+    gallery: [
+      'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ]
   },
   {
     id: '2',
@@ -66,7 +74,13 @@ const initialProjects: Project[] = [
     category: 'T-Shirt',
     image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     description: 'Modern streetwear design for a local brand.',
+    longDescription: 'A unique collection of apparel designs focusing on modern streetwear aesthetics, featuring custom illustrations and typography tailored for a local lifestyle brand.',
     tools: ['Photoshop', 'Illustrator'],
+    gallery: [
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ]
   },
   {
     id: '3',
@@ -74,7 +88,13 @@ const initialProjects: Project[] = [
     category: 'Ads',
     image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     description: 'Social media advertisement for new headphones.',
+    longDescription: 'High-impact social media campaign visuals designed to highlight the premium features of an upcoming noise-canceling headphone release, resulting in a 30% increase in pre-orders.',
     tools: ['Photoshop', 'After Effects'],
+    gallery: [
+      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ]
   },
     {
     id: '4',
@@ -82,7 +102,13 @@ const initialProjects: Project[] = [
     category: 'Banner',
     image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     description: 'LinkedIn banner for a software company.',
+    longDescription: 'A visually striking LinkedIn banner created for a B2B software company, emphasizing their core values of innovation and connectivity to attract enterprise clients.',
     tools: ['Illustrator', 'Figma'],
+    gallery: [
+      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ]
   },
 ];
 

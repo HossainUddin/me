@@ -12,12 +12,18 @@ export const AdminProjects = () => {
     const handleSave = (e: React.FormEvent) => {
         e.preventDefault();
         if (currentProject.id && projects.find(p => p.id === currentProject.id)) {
-            updateProject(currentProject.id, currentProject);
+            const updatedProject = {
+                ...currentProject,
+                tools: typeof currentProject.tools === 'string' ? (currentProject.tools as string).split(',').map(t=>t.trim()).filter(Boolean) : currentProject.tools || [],
+                gallery: Array.isArray(currentProject.gallery) ? currentProject.gallery : typeof currentProject.gallery === 'string' ? (currentProject.gallery as string).split(',').map(g=>g.trim()).filter(Boolean) : []
+            };
+            updateProject(currentProject.id, updatedProject);
         } else {
             addProject({
                 ...currentProject,
                 id: Date.now().toString(),
-                tools: typeof currentProject.tools === 'string' ? (currentProject.tools as string).split(',') : currentProject.tools || []
+                tools: typeof currentProject.tools === 'string' ? (currentProject.tools as string).split(',').map(t=>t.trim()).filter(Boolean) : currentProject.tools || [],
+                gallery: Array.isArray(currentProject.gallery) ? currentProject.gallery : typeof currentProject.gallery === 'string' ? (currentProject.gallery as string).split(',').map(g=>g.trim()).filter(Boolean) : []
             } as Project);
         }
         setIsEditing(false);
@@ -108,10 +114,29 @@ export const AdminProjects = () => {
                             />
                             <textarea 
                                 className="w-full p-2 border rounded dark:bg-slate-700 dark:text-white dark:border-slate-600" 
-                                placeholder="Description"
+                                placeholder="Short Description"
                                 value={currentProject.description || ''}
                                 onChange={(e) => setCurrentProject({...currentProject, description: e.target.value})}
                                 required
+                            />
+                            <textarea 
+                                className="w-full p-2 border rounded dark:bg-slate-700 dark:text-white dark:border-slate-600" 
+                                placeholder="Detailed Description (Optional)"
+                                value={currentProject.longDescription || ''}
+                                onChange={(e) => setCurrentProject({...currentProject, longDescription: e.target.value})}
+                                rows={4}
+                            />
+                            <input 
+                                className="w-full p-2 border rounded dark:bg-slate-700 dark:text-white dark:border-slate-600" 
+                                placeholder="Tools (Comma Separated)"
+                                value={Array.isArray(currentProject.tools) ? currentProject.tools.join(', ') : currentProject.tools || ''}
+                                onChange={(e) => setCurrentProject({...currentProject, tools: e.target.value as any})}
+                            />
+                            <input 
+                                className="w-full p-2 border rounded dark:bg-slate-700 dark:text-white dark:border-slate-600" 
+                                placeholder="Gallery Image URLs (Comma Separated)"
+                                value={Array.isArray(currentProject.gallery) ? currentProject.gallery.join(', ') : currentProject.gallery || ''}
+                                onChange={(e) => setCurrentProject({...currentProject, gallery: e.target.value.split(',').map(s=>s.trim()).filter(Boolean) as any})}
                             />
                             <Button type="submit" className="w-full">Save Project</Button>
                         </form>
