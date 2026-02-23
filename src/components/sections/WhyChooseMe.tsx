@@ -38,29 +38,46 @@ export const WhyChooseMe = () => {
         </div>
 
         {/* Right: Visual */}
-        <div className="relative">
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl bg-slate-200 dark:bg-slate-800">
-                 {/* Placeholder for About Image */}
-                 <img 
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
+            <div className="relative aspect-[4/5] rounded-[2rem] rounded-tr-[5rem] rounded-bl-[5rem] overflow-hidden shadow-2xl bg-slate-200 dark:bg-slate-800 border-[8px] border-white dark:border-slate-800">
+                 <motion.img 
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.6 }}
                     src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                     alt="Working" 
                     className="w-full h-full object-cover"
                  />
-                 <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-overlay"></div>
             </div>
             
-            {/* Simple decorative element */}
+            {/* Floating Experience Badge */}
             <motion.div 
-               animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
+               animate={{ y: [0, -12, 0] }}
                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-               className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/20 backdrop-blur-3xl rounded-full -z-10"
-            ></motion.div>
+               className="absolute -bottom-6 -left-6 md:-left-12 bg-white dark:bg-slate-800 p-5 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4 z-10"
+            >
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-2xl">
+                    5+
+                </div>
+                <div className="pr-4">
+                    <p className="font-bold text-slate-900 dark:text-white text-lg leading-tight">Years of</p>
+                    <p className="text-sm text-slate-500 font-medium tracking-wide">Experience</p>
+                </div>
+            </motion.div>
+            
+            {/* Decorative dashed circle */}
             <motion.div 
-               animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3], y: [0, -10, 0] }}
-               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-               className="absolute -top-6 -right-6 w-32 h-32 bg-purple-500/20 backdrop-blur-3xl rounded-full -z-10"
+               animate={{ rotate: 360 }}
+               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+               className="absolute -top-10 -right-10 w-40 h-40 border-2 border-dashed border-primary/40 rounded-full -z-10"
             ></motion.div>
-        </div>
+        </motion.div>
       </div>
     </Section>
   );
