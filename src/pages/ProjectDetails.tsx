@@ -93,7 +93,6 @@ export const ProjectDetails = () => {
                                  ))}
                              </div>
                         </div>
-                        </div>
 
                         {project.gallery && project.gallery.length > 0 && (
                             <div className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800">
