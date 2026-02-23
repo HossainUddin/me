@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate, Navigate } from 'react-router-dom';
 import { LayoutDashboard, FolderKanban, ShoppingBag, MessageSquare, LogOut } from 'lucide-react';
 
 export const AdminLayout = () => {
@@ -9,6 +9,18 @@ export const AdminLayout = () => {
         { path: '/admin/services', icon: ShoppingBag, label: 'Services' },
         { path: '/admin/testimonials', icon: MessageSquare, label: 'Testimonials' },
     ];
+
+    const navigate = useNavigate();
+    const isAuthenticated = localStorage.getItem('admin_auth') === 'true';
+
+    if (!isAuthenticated) {
+        return <Navigate to="/admin/login" />;
+    }
+
+    const handleLogout = () => {
+        localStorage.removeItem('admin_auth');
+        navigate('/admin/login');
+    };
 
     return (
         <div className="min-h-screen bg-slate-100 dark:bg-slate-900 flex">
@@ -39,7 +51,10 @@ export const AdminLayout = () => {
                 </nav>
 
                 <div className="p-4 border-t border-slate-200 dark:border-slate-700">
-                    <button className="flex items-center w-full px-4 py-3 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors">
+                    <button 
+                         onClick={handleLogout}
+                         className="flex items-center w-full px-4 py-3 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors"
+                    >
                         <LogOut size={20} className="mr-3" />
                         <span className="font-medium">Logout</span>
                     </button>

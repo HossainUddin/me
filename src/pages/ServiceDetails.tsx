@@ -90,7 +90,7 @@ export const ServiceDetails = () => {
                          <div className="text-center">
                             <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Ready to get started?</h2>
                             <button 
-                                onClick={() => navigate('/')} 
+                                onClick={() => navigate('/', { state: { scrollTo: 'cta' } })} 
                                 className="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transition-all"
                             >
                                 Contact Me Today

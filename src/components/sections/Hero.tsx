@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { Button } from '../ui/Button';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-scroll';
+import meImage from '../../assets/ME.png';
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -40,7 +41,7 @@ export const Hero = () => {
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-             <Link to="contact" smooth={true} duration={500}>
+             <Link to="cta" smooth={true} duration={500}>
               <Button variant="outline" size="lg">
                 {t('hero.hireMe')}
               </Button>
@@ -64,9 +65,8 @@ export const Hero = () => {
                 className="relative z-10 bg-slate-200 dark:bg-slate-800 rounded-2xl shadow-2xl overflow-hidden border border-slate-300 dark:border-slate-700 h-full w-full flex items-center justify-center"
               >
                   <span className="text-slate-400">
-                    {/* Hero Illustration / 3D Element */}
-                    <img src="src/assets/me.png" alt="hero" />
-                    </span>
+                    <img src={meImage} alt="Hossain Uddin Ahamad" className="w-[80%] h-auto rounded-xl mx-auto drop-shadow-2xl" />
+                  </span>
               </motion.div>
               
               {/* Floating Elements */}

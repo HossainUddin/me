@@ -41,6 +41,10 @@ interface DataContextType {
   addService: (service: Service) => void;
   updateService: (id: string, service: Partial<Service>) => void;
   deleteService: (id: string) => void;
+  // Testimonial methods
+  addTestimonial: (testimonial: Testimonial) => void;
+  updateTestimonial: (id: string, testimonial: Partial<Testimonial>) => void;
+  deleteTestimonial: (id: string) => void;
 }
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -192,11 +196,25 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     setServices(services.filter(s => s.id !== id));
   };
   
+  // Testimonials
+  const addTestimonial = (testimonial: Testimonial) => {
+    setTestimonials([...testimonials, testimonial]);
+  };
+
+  const updateTestimonial = (id: string, updatedTestimonial: Partial<Testimonial>) => {
+    setTestimonials(testimonials.map(t => t.id === id ? { ...t, ...updatedTestimonial } : t));
+  };
+
+  const deleteTestimonial = (id: string) => {
+    setTestimonials(testimonials.filter(t => t.id !== id));
+  };
+
   return (
     <DataContext.Provider value={{ 
         projects, services, testimonials, 
         addProject, updateProject, deleteProject,
-        addService, updateService, deleteService
+        addService, updateService, deleteService,
+        addTestimonial, updateTestimonial, deleteTestimonial
     }}>
       {children}
     </DataContext.Provider>

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import { Hero } from '../components/sections/Hero';
 import { TrustBar } from '../components/sections/TrustBar';
 import { Services } from '../components/sections/Services';
@@ -10,6 +12,19 @@ import { OrderModal } from '../components/ui/OrderModal';
 
 const Home = () => {
     const [isModalOpen, setModalOpen] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state?.scrollTo) {
+            setTimeout(() => {
+                scroller.scrollTo(location.state.scrollTo, {
+                    smooth: true,
+                    duration: 500,
+                    offset: -80,
+                });
+            }, 100);
+        }
+    }, [location]);
 
     return (
         <div className="min-h-screen">

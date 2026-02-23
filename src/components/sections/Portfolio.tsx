@@ -5,6 +5,7 @@ import { Section } from '../ui/Section';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '../ui/Button';
 import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Portfolio = () => {
   const { t } = useLanguage();
@@ -73,9 +74,11 @@ export const Portfolio = () => {
                  <p className="text-slate-300 text-sm mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                    {project.category}
                  </p>
-                 <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-primary translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
-                    View Details
-                 </Button>
+                 <Link to={`/portfolio/${project.id}`}>
+                   <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-primary translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
+                      View Details
+                   </Button>
+                 </Link>
               </div>
               
               {/* Mobile details (visible below image on mobile, or just standard card view) */}
