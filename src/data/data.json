@@ -2,62 +2,211 @@
   "projects": [
     {
       "id": "1",
-      "title": "E-Commerce Platform",
+      "title": "FastBooking – Hotel & Travel Booking Website UI Design",
       "category": "Web",
-      "image": "https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "description": "Full-stack e-commerce solution with payment gateway.",
-      "longDescription": "This comprehensive e-commerce platform provides an intuitive shopping experience with seamless payment integration, user dashboards, and an admin panel for inventory management.",
-      "tools": ["Reacts", "Note.book", "MongoDB", "GG"],
-      "link": "#",
+      "image": "src/assets/projects/web/fastbooking/1.png",
+      "description": "FastBooking – Hotel & Travel Booking Website UI Design",
+      "longDescription": "Clean and modern travel booking website UI with hotel search, destinations, resort listings, booking form, and responsive layout designed for smooth user experience",
+      "tools": ["HTML", "Tailwind CSS", "JavaScript"],
+      "link": "https://hossainuddin.github.io/FastBooking-by-Hossain/",
       "gallery": [
-        "https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "src/assets/projects/web/fastbooking/2.png",
+        "src/assets/projects/web/fastbooking/3.png",
+        "src/assets/projects/web/fastbooking/4.png"
       ]
     },
     {
       "id": "2",
-      "title": "Urban Streetwear",
-      "category": "T-Shirt",
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "description": "Modern streetwear design for a local brand.",
-      "longDescription": "A unique collection of apparel designs focusing on modern streetwear aesthetics, featuring custom illustrations and typography tailored for a local lifestyle brand.",
-      "tools": ["Photoshop", "Illustrator"],
+      "title": "PhotoGraphy – Photography Portfolio Website UI Design",
+      "category": "Web",
+      "image": "src/assets/projects/web/photography/1.png",
+      "description": "Photography Portfolio Website UI Design",
+      "longDescription": "Modern photography portfolio website UI featuring clean layout, gallery showcase, services section, customer testimonials, and contact form designed for professional photographers and creative portfolios",
+      "tools": ["HTML", "Tailwind CSS", "JavaScript"],
+      "link": "https://hossainuddin.github.io/PhotoGraphy-By-Hossain/",
       "gallery": [
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "src/assets/projects/web/photography/2.png",
+        "src/assets/projects/web/photography/3.png",
+        "src/assets/projects/web/photography/4.png"
       ]
     },
     {
       "id": "3",
-      "title": "Tech Gadget Ad",
-      "category": "Ads",
-      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "description": "Social media advertisement for new headphones.",
-      "longDescription": "High-impact social media campaign visuals designed to highlight the premium features of an upcoming noise-canceling headphone release, resulting in a 30% increase in pre-orders.",
-      "tools": ["Photoshop", "After Effects"],
+      "title": "Agriculture in Bangladesh Website UI Design",
+      "category": "Web",
+      "image": "src/assets/projects/web/bangladesh/1.png",
+      "description": "Agriculture in Bangladesh Website UI Design",
+      "longDescription": "Modern agriculture information website UI featuring a clean green-themed layout, categorized sections for major crops (rice, wheat, maize), livestock highlights, and data-driven infographics designed to showcase Bangladesh's agrarian economy and food security progress",
+      "tools": ["HTML", "Tailwind CSS", "JavaScript"],
+      "link": "https://hossainuddin.github.io/Bangladesh-Blog/",
       "gallery": [
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "src/assets/projects/web/bangladesh/2.png",
+        "src/assets/projects/web/bangladesh/3.png"
       ]
     },
     {
       "id": "4",
+      "title": "Hossain's Restaurant – Bangladeshi Style Dining Website UI Design",
+      "category": "Web",
+      "image": "src/assets/projects/web/restaurant/1.png",
+      "description": "Hossain's Restaurant – Bangladeshi Style Dining Website UI Design",
+      "longDescription": "Modern restaurant landing page UI featuring a vibrant Bangladeshi Style hero section with 20% discount offers, a categorized menu of popular items, integrated online table booking, and customer testimonials designed for authentic culinary businesses",
+      "tools": ["HTML", "Tailwind CSS", "JavaScript"],
+      "link": "https://hossainuddin.github.io/Hossain-s-Restaurant/",
+      "gallery": [
+        "src/assets/projects/web/restaurant/2.png",
+        "src/assets/projects/web/restaurant/3.png",
+        "src/assets/projects/web/restaurant/4.png"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Clinika – Medical Clinic & Blood Donation Website UI Design",
+      "category": "Web",
+      "image": "src/assets/projects/web/blood/1.png",
+      "description": "Clinika – Medical Clinic & Blood Donation Website UI Design",
+      "longDescription": "Modern medical clinic and blood donation platform UI featuring a streamlined Find a Doctor booking system, detailed blood donation process guides, a searchable donor network, and real-time blood bank availability designed for healthcare providers and emergency services ",
+      "tools": ["HTML", "Tailwind CSS", "JavaScript"],
+      "link": "https://hossainuddin.github.io/Blod-Donation-Hossain/",
+      "gallery": [
+        "src/assets/projects/web/blood/2.png",
+        "src/assets/projects/web/blood/3.png",
+        "src/assets/projects/web/blood/4.png"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Robert Garcia – Front-End Developer Portfolio Website UI Design",
+      "category": "Web",
+      "image": "src/assets/projects/web/robert-garcia/1.png",
+      "description": "Robert Garcia – Front-End Developer Portfolio Website UI Design",
+      "longDescription": "Modern and minimalist dark-themed portfolio UI for a Sydney-based front-end developer featuring a bold hero section, detailed project cards for Adventure Time and World News, a specialized 'About Me' section highlighting a mechanical engineering background, and a clean contact form designed for professional creative networking",
+      "tools": ["HTML", "Tailwind CSS", "JavaScript"],
+      "link": "https://hossainuddin.github.io/Robert-Garcia-T-By-Hossain/",
+      "gallery": [
+        "src/assets/projects/web/robert-garcia/2.png",
+        "src/assets/projects/web/robert-garcia/3.png",
+        "src/assets/projects/web/robert-garcia/4.png"
+      ]
+    },
+
+
+
+    {
+      "id": "20",
+      "title": "Ultimate Anime Mashup Streetwear Hoodie – Premium Aesthetic Graphic Pullover",
+      "category": "T-Shirt",
+      "image": "src/assets/projects/tshirt/b-mockup1.jpg",
+      "description": "Ultimate Anime Mashup Streetwear Hoodie – Premium Aesthetic Graphic Pullover",
+      "longDescription": "Express your fandom with this exclusive anime collage hoodie, featuring a high-definition mix of iconic shonen-inspired visuals printed on a heavyweight cotton-blend fabric for a durable, premium feel that stands out in any urban setting.",
+      "tools": ["Photoshop"],
+      "link": "https://www.facebook.com/SlotShotsBD/posts/pfbid033LVKFLVwPSEX5xFDMp7GMQxsJi5hCHD3UHBZBcigJDJVP3LfC4RSnZz3RpPHKwYnl",
+      "gallery": [
+        "src/assets/projects/tshirt/b-mockup2.jpg",
+        "src/assets/projects/tshirt/b-mockup3.jpg",
+        "src/assets/projects/tshirt/b-mockup4.jpg",
+        "src/assets/projects/tshirt/b-mockup5.jpg",
+        "src/assets/projects/tshirt/b-mockup6.jpg",
+        "src/assets/projects/tshirt/b-mockup7.jpg",
+        "src/assets/projects/tshirt/b-mockup8.jpg",
+        "src/assets/projects/tshirt/b-mockup9.jpg"
+      ]
+    },
+    {
+      "id": "21",
+      "title": "Ultimate Anime Mashup Streetwear Hoodie – Premium Aesthetic Graphic Pullover",
+      "category": "T-Shirt",
+      "image": "src/assets/projects/tshirt/w-mockup1.jpg",
+      "description": "Ultimate Anime Mashup Streetwear Hoodie – Premium Aesthetic Graphic Pullover",
+      "longDescription": "Express your fandom with this exclusive anime collage hoodie, featuring a high-definition mix of iconic shonen-inspired visuals printed on a heavyweight cotton-blend fabric for a durable, premium feel that stands out in any urban setting.",
+      "tools": ["Photoshop"],
+      "link": "https://www.facebook.com/SlotShotsBD/posts/pfbid033LVKFLVwPSEX5xFDMp7GMQxsJi5hCHD3UHBZBcigJDJVP3LfC4RSnZz3RpPHKwYnl",
+      "gallery": [
+        "src/assets/projects/tshirt/w-mockup2.jpg",
+        "src/assets/projects/tshirt/w-mockup3.jpg",
+        "src/assets/projects/tshirt/w-mockup4.jpg",
+        "src/assets/projects/tshirt/w-mockup5.jpg",
+        "src/assets/projects/tshirt/w-mockup6.jpg"
+      ]
+    },
+
+
+
+    {
+      "id": "30",
+      "title": "Social Media Ads",
+      "category": "Ads",
+      "image": "src/assets/projects/ads/p1.png",
+      "description": "Social Media Ads",
+      "longDescription": "A sleek and modern social media ad designed to promote the latest wireless headphones, featuring a high-contrast image of the product, bold typography highlighting key features, and a clear call-to-action to drive sales.",
+      "tools": ["Canva", "Some AI Tool"],
+      "gallery": [
+        "src/assets/projects/ads/p5.png",
+        "src/assets/projects/ads/p6.png",
+        "src/assets/projects/ads/p7.png"
+      ]
+    },
+    {
+      "id": "31",
+      "title": "Social Media Ads",
+      "category": "Ads",
+      "image": "src/assets/projects/ads/p2.png",
+      "description": "Social Media Ads",
+      "longDescription": "A sleek and modern social media ad designed to promote the latest wireless headphones, featuring a high-contrast image of the product, bold typography highlighting key features, and a clear call-to-action to drive sales.",
+      "tools": ["Canva", "Some AI Tool"],
+      "gallery": [
+        "src/assets/projects/ads/p8.png",
+        "src/assets/projects/ads/p9.png",
+        "src/assets/projects/ads/p10.png"
+      ]
+    },
+    {
+      "id": "32",
+      "title": "Social Media Ads",
+      "category": "Ads",
+      "image": "src/assets/projects/ads/p3.png",
+      "description": "Social Media Ads",
+      "longDescription": "A sleek and modern social media ad designed to promote the latest wireless headphones, featuring a high-contrast image of the product, bold typography highlighting key features, and a clear call-to-action to drive sales.",
+      "tools": ["Canva", "Some AI Tool"],
+      "gallery": [
+        "src/assets/projects/ads/p11.png",
+        "src/assets/projects/ads/p12.png",
+        "src/assets/projects/ads/p13.png"
+      ]
+    },
+    {
+      "id": "33",
+      "title": "Social Media Ads",
+      "category": "Ads",
+      "image": "src/assets/projects/ads/p4.png",
+      "description": "Social Media Ads",
+      "longDescription": "A sleek and modern social media ad designed to promote the latest wireless headphones, featuring a high-contrast image of the product, bold typography highlighting key features, and a clear call-to-action to drive sales.",
+      "tools": ["Canva", "Some AI Tool"],
+      "gallery": [
+        "src/assets/projects/ads/p14.png",
+        "src/assets/projects/ads/p15.png",
+        "src/assets/projects/ads/p16.png"
+      ]
+    },
+
+
+
+    {
+      "id": "40",
       "title": "Corporate Banner",
       "category": "Banner",
-      "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "description": "LinkedIn banner for a software company.",
-      "longDescription": "A visually striking LinkedIn banner created for a B2B software company, emphasizing their core values of innovation and connectivity to attract enterprise clients.",
-      "tools": ["Illustrator", "Figma"],
+      "image": "src/assets/projects/banners/b1.png",
+      "description": "Corporate Banner",
+      "longDescription": "A sleek and professional LinkedIn banner designed for a software company, featuring a modern cityscape background, bold typography highlighting the company's core values, and a clean layout that conveys innovation and trustworthiness.",
+      "tools": ["Canva", "Some AI Tool"],      
       "gallery": [
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        "src/assets/projects/banners/b2.png",
+        "src/assets/projects/banners/b3.png",
+        "src/assets/projects/banners/b4.png"
       ]
     }
   ],
+
   "services": [
     {
       "id": "1",
@@ -83,7 +232,11 @@
       "description": "Eye-catching visuals to boost your product sales.",
       "price": "$80",
       "deliveryTime": "3 Days",
-      "features": ["Social Media Ready", "High Conversion", "Unlimited Revisions"],
+      "features": [
+        "Social Media Ready",
+        "High Conversion",
+        "Unlimited Revisions"
+      ],
       "icon": "Megaphone"
     },
     {
@@ -96,6 +249,7 @@
       "icon": "Image"
     }
   ],
+
   "testimonials": [
     {
       "id": "1",

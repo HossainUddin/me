@@ -57,7 +57,7 @@ export const WhyChooseMe = () => {
                     alt="Hossain Uddin Ahamad" 
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                  />
-                 <div className="absolute inset-0 bg-primary/20 mix-blend-color group-hover:opacity-0 transition-opacity duration-700"></div>
+                 <div className="absolute inset-0 bg-gray-900/40 mix-blend-color group-hover:opacity-0 transition-opacity duration-700"></div>
             </div>
             
             {/* Floating Experience Badge */}
